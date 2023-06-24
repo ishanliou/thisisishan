@@ -1,26 +1,24 @@
-import Link from "next/link";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-// import { AiOutlineMail } from "react-icons/ai";
-// import { BsFillPersonLinesFill } from "react-icons/bs";
+import React, { useEffect } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { gsap } from "gsap";
 
 const Main = () => {
-  let tl = gsap.timeline();
+  let tl = gsap.timeline({ delay: 0.2 });
 
   useEffect(() => {
     tl.to(".animation", {
       duration: 1,
       autoAlpha: 1,
       opacity: 1,
-      y: -60,
-      ease: "power1.inOut",
+      y: -100,
+      ease: "power2.out",
       stagger: {
         each: 0.1,
-        ease: "sine.inOut",
+        ease: "sine.out",
       },
     });
   }, [tl]);
+
   return (
     <div id="main" className="w-full h-screen text-center ">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
