@@ -7,7 +7,7 @@ import Image from "next/image";
 const ToggleButton = () => {
   //Delay rendeing  any theme toggling UI until mountedon the client. Hydration mismatch
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme("system");
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -18,7 +18,7 @@ const ToggleButton = () => {
     return null;
   }
 
-  console.log(theme);
+  console.log(resolvedTheme);
 
   return (
     <div className="">
@@ -32,7 +32,7 @@ const ToggleButton = () => {
         dark:bg-gradient-to-br dark:from-purple-600 dark:to-blue-500
         dark:ring-blue-300 dark:ring-4
         dark:hover:bg-gradient-to-bl dark:focus:ring-4 dark:focus:outline-none dark:focus:ring-blue-300"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         <Image
           className="sun-icon w-10 h-10 mr-2 ease-out duration-150 
