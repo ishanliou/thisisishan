@@ -7,25 +7,25 @@ import Image from "next/image";
 const ToggleButton = () => {
   //Delay rendeing  any theme toggling UI until mountedon the client. Hydration mismatch
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme("system");
+  const { systemTheme, resolvedTheme, setTheme } = useTheme();
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // clear localStorage theme
+  //Change theme use system theme changes
   useEffect(() => {
-    localStorage.clear();
-    setTheme("system");
-  }, [setTheme]);
+    setTheme(systemTheme);
+  }, [systemTheme]);
 
   if (!mounted) {
     return null;
   }
 
   console.log("local", window.localStorage);
-  console.log(resolvedTheme);
+  console.log("systemTheme", systemTheme);
+  console.log("current theme", resolvedTheme);
 
   return (
     <div className="">
