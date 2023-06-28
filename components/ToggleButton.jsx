@@ -14,10 +14,17 @@ const ToggleButton = () => {
     setMounted(true);
   }, []);
 
+  // clear localStorage theme
+  useEffect(() => {
+    localStorage.clear();
+    setTheme("system");
+  }, [setTheme]);
+
   if (!mounted) {
     return null;
   }
 
+  console.log("local", window.localStorage);
   console.log(resolvedTheme);
 
   return (
@@ -46,6 +53,7 @@ const ToggleButton = () => {
           dark:opacity-100 ease-in duration-150 dark:translate-y-0"
           src={MoonIcon}
           alt="moon icon"
+          priority
         />
       </button>
     </div>
