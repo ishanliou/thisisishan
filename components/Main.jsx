@@ -4,9 +4,9 @@ import { gsap } from "gsap";
 import ToggleButton from "./ToggleButton";
 
 const Main = () => {
-  let tl = gsap.timeline({ delay: 0.2 });
-
   useEffect(() => {
+    let tl = gsap.timeline({ delay: 0.2 });
+
     tl.to(".animation", {
       duration: 1,
       autoAlpha: 1,
@@ -18,7 +18,7 @@ const Main = () => {
         ease: "sine.out",
       },
     });
-  }, [tl]);
+  }, []);
 
   return (
     <div id="main" className="w-full h-screen text-center dark:bg-[#121212]">

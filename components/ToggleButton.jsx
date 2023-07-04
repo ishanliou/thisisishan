@@ -23,9 +23,9 @@ const ToggleButton = () => {
     return null;
   }
 
-  console.log("local", window.localStorage);
-  console.log("systemTheme", systemTheme);
-  console.log("current theme", resolvedTheme);
+  // console.log("local", window.localStorage);
+  // console.log("systemTheme", systemTheme);
+  // console.log("current theme", resolvedTheme);
 
   return (
     <div className="">
