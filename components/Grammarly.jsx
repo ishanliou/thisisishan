@@ -8,7 +8,7 @@ const Grammarly = () => {
           Grammarly
         </div>
         <div className="video-container w-100 h-full ">
-          <video className="w-80 h-auto]" controls autoPlay loop muted>
+          <video className="w-80 h-auto" controls autoPlay loop muted>
             <source src="/video/grammarly.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

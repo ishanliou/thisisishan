@@ -1,7 +1,7 @@
-import ProjectsHolder from "@/components/ProjectsHolder";
+import ProjectsPage from "@/components/ProjectsPage";
 
 const Projects = () => {
-  return <ProjectsHolder />;
+  return <ProjectsPage />;
 };
 
 export default Projects;
