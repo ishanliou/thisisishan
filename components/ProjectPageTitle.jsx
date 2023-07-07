@@ -6,7 +6,7 @@ const ProjectPageTitle = () => {
     let tl = gsap.timeline();
 
     tl.fromTo(
-      "span",
+      ".tech",
       {
         duration: 1.8,
         opacity: 0,
@@ -67,15 +67,15 @@ const ProjectPageTitle = () => {
         </p>
 
         <div className="hr w-full h-[1px] bg-slate-700"></div>
-        <div className="flex justify-end tracking-widest text-gray-400 dark:text-gray-400">
-          <span className="mr-1">HTML |</span>
-          <span className="mr-1">CSS |</span>
-          <span className="mr-1">Bootstrap |</span>
-          <span className="mr-1">Tailwind |</span>
-          <span className="mr-1"> JavaScript |</span>
-          <span className="mr-1"> React.js |</span>
-          <span className="mr-1"> Next.js |</span>
-          <span className="mr-1"> Greensock/ Gsap</span>
+        <div className="flex-col  tracking-widest text-gray-400 dark:text-gray-400 mt-1">
+          <div className="mr-1 tech">HTML |</div>
+          <div className="mr-1 tech">CSS |</div>
+          <div className="mr-1 tech">Bootstrap |</div>
+          <div className="mr-1 tech">Tailwind |</div>
+          <div className="mr-1 tech"> JavaScript |</div>
+          <div className="mr-1 tech"> React.js |</div>
+          <div className="mr-1 tech"> Next.js |</div>
+          <div className="mr-1 tech"> Greensock Gsap |</div>
         </div>
       </div>
     </>
