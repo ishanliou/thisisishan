@@ -1,7 +1,13 @@
+import ArrowLeft from "@/components/ArrowLeft";
 import ProjectsPage from "@/components/ProjectsPage";
 
 const Projects = () => {
-  return <ProjectsPage />;
+  return (
+    <>
+      <ArrowLeft />
+      <ProjectsPage />
+    </>
+  );
 };
 
 export default Projects;

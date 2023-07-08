@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const ProjectPageTitle = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const ProjectPageHeader = () => {
   useEffect(() => {
     let tl = gsap.timeline();
 
@@ -61,8 +64,8 @@ const ProjectPageTitle = () => {
   }, []);
   return (
     <>
-      <div className="max-w-[1440px] w-full h-200 p-2 group mx-20 my-20">
-        <p className=" project-title uppercase text-md md:text-7xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
+      <div className="max-w-[1440px] h-200 p-2 group mx-20 my-20">
+        <p className="project-header uppercase text-5xl md:text-7xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
           Frontend
         </p>
 
@@ -75,11 +78,11 @@ const ProjectPageTitle = () => {
           <div className="mr-1 tech"> JavaScript |</div>
           <div className="mr-1 tech"> React.js |</div>
           <div className="mr-1 tech"> Next.js |</div>
-          <div className="mr-1 tech"> Greensock Gsap |</div>
+          <div className="mr-1 tech"> Greensock / Gsap |</div>
         </div>
       </div>
     </>
   );
 };
 
-export default ProjectPageTitle;
+export default ProjectPageHeader;

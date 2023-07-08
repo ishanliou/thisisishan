@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { projectsData } from "./data/projectsData";
 import ProjectSingle from "./ProjectSingle";
-import ProjectPageTitle from "./ProjectPageTitle";
 
-gsap.registerPlugin(ScrollTrigger);
+import ProjectPageHeader from "./ProjectPageHeader";
 
 const ProjectsPage = () => {
   const [projectsRef, setProjectsRef] = useArrayRef();
@@ -20,22 +19,23 @@ const ProjectsPage = () => {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    const GSAP = require("gsap/CSSRulePlugin");
-    const { CSSRulePlugin } = GSAP;
-    gsap.registerPlugin(CSSRulePlugin);
+    // const GSAP = require("gsap/CSSRulePlugin");
+    // const { CSSRulePlugin } = GSAP;
+    // gsap.registerPlugin(CSSRulePlugin);
 
     // console.log(projectsRef.current);
 
     projectsRef.current.forEach((project) => {
       const wrapper = project.querySelector(".reveal");
+      const right = project.querySelector(".baileyNelson-project");
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
-          start: "top center+=30",
+          start: "top center+=40",
           // start: "top bottom",
           end: "bottom +=80",
-          markers: true,
+          // markers: true,
           toggleActions: "play none none reverse",
           // toggleActions: "restart none none reset",
           // scrub: true,
@@ -51,18 +51,23 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <>
-      <ProjectPageTitle />
-      {projectsData.map((project) => (
-        <ProjectSingle
-          key={project.name}
-          name={project.name}
-          backgroundColor={project.backgroundColor}
-          image={project.image}
-          setProjectsRef={setProjectsRef}
-        />
-      ))}
-    </>
+    <div className="project-page p-8">
+      <ProjectPageHeader />
+      <div className="project-sections flex-col">
+        {projectsData.map((project) => (
+          <ProjectSingle
+            key={project.name}
+            name={project.name}
+            backgroundColor={project.backgroundColor}
+            image={project.image}
+            borderRadiusRight={project.borderRadiusRight}
+            borderRadiusLeft={project.borderRadiusLeft}
+            backgroundWidth={project.backgroundWidth}
+            setProjectsRef={setProjectsRef}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

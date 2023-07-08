@@ -1,15 +1,23 @@
 import React from "react";
 
-const ProjectSingle = ({ name, backgroundColor, image, setProjectsRef }) => {
+const ProjectSingle = ({
+  name,
+  backgroundColor,
+  image,
+  borderRadiusRight,
+  borderRadiusLeft,
+  backgroundWidth,
+  setProjectsRef,
+}) => {
   console.log(name);
   return (
-    <section className={`"${name}-project mt-28 project"`} ref={setProjectsRef}>
+    <section className={`${name}-project mt-28 project`} ref={setProjectsRef}>
       <div
-        className={`"project-container relative max-w-[1040px] w-full h-full mx-auto p-4 flex justify-center items-center bg-${backgroundColor} rounded-r-full reveal rounded-tl-full"`}
+        className={`"project-container relative max-w-${backgroundWidth} w-full h-full mx-auto p-4 flex justify-center items-center bg-${backgroundColor} rounded-${borderRadiusRight} reveal rounded-${borderRadiusLeft} "`}
       >
-        <div className="absolute bottom-0 left-0 h-16 w-16 ml-10 uppercase text-sm md:text-l tracking-widest text-gray-100">
+        {/* <div className="absolute bottom-0 left-0 h-16 w-16 ml-10 uppercase text-sm md:text-l tracking-widest text-gray-100">
           {name}
-        </div>
+        </div> */}
         <div className="video-container w-100 h-full ">
           <video className="w-80 h-auto" controls autoPlay loop muted>
             <source src={image} type="video/mp4" />

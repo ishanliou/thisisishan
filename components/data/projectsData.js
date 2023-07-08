@@ -4,6 +4,9 @@ export const projectsData = [
     hasMargin: false,
     backgroundColor: "[#147a9c]",
     image: "/video/grammarly.mp4",
+    borderRadiusRight: "r-full",
+    borderRadiusLeft: "tl-full",
+    backgroundWidth: "[1040px]",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -11,6 +14,9 @@ export const projectsData = [
     hasMargin: true,
     backgroundColor: "[#fbcd03]",
     image: "/video/moscot_s.mp4",
+    borderRadiusRight: "tr-full",
+    borderRadiusLeft: "l-full",
+    backgroundWidth: "[640px]",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -18,6 +24,9 @@ export const projectsData = [
     hasMargin: false,
     backgroundColor: "[#dfd9fe]",
     image: "/video/baileyNelson.mp4",
+    borderRadiusRight: "tr-full",
+    borderRadiusLeft: "l-full",
+    backgroundWidth: "[1040px]",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -25,6 +34,9 @@ export const projectsData = [
     hasMargin: true,
     backgroundColor: "black",
     image: "/video/kind.mp4",
+    borderRadiusRight: "r-full",
+    borderRadiusLeft: "bl-full",
+    backgroundWidth: "[640px]",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -32,6 +44,9 @@ export const projectsData = [
     hasMargin: false,
     backgroundColor: "black",
     image: "/video/nike.mp4",
+    borderRadiusRight: "r-full",
+    borderRadiusLeft: "bl-full",
+    backgroundWidth: "[640px]",
     technologies: ["Next.js", "Gsap", "Css"],
   },
 ];
