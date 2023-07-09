@@ -33,7 +33,8 @@ const ProjectsPage = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
-          start: "top center+=40",
+          // start: "top center+=40",
+          start: "top-=100 center",
           // start: "top bottom",
           end: "bottom +=80",
           // markers: true,
@@ -45,21 +46,22 @@ const ProjectsPage = () => {
 
       tl.to(wrapper, {
         ease: "power2.out",
-        duration: 1,
+        duration: 1.2,
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       });
     });
   }, []);
 
   return (
-    <div className="project-page p-8">
+    <div className="project-page p-12 md:p-28">
       <ArrowLeft />
       <ProjectPageHeader />
-      <div className="project-sections flex-col">
+      <main className="project-sections flex flex-wrap justify-center lg:justify-between gap-x-2.5 lg:gap-x-2 gap-y-10 md:gap-y-56 ">
         {projectsData.map((project) => (
           <ProjectSingle
             key={project.name}
             name={project.name}
+            hasMargin={project.hasMargin}
             backgroundColor={project.backgroundColor}
             image={project.image}
             borderRadiusRight={project.borderRadiusRight}
@@ -69,7 +71,7 @@ const ProjectsPage = () => {
             setProjectsRef={setProjectsRef}
           />
         ))}
-      </div>
+      </main>
     </div>
   );
 };

@@ -64,8 +64,8 @@ const ProjectPageHeader = () => {
   }, []);
   return (
     <>
-      <div className="max-w-[1440px] h-200 p-2 group mx-20 my-20">
-        <p className="project-header uppercase text-5xl md:text-7xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
+      <div className="max-w-[1440px] h-[36vh] lg:h-[45vh] group ">
+        <p className="project-header uppercase text-4xl sm:text-7xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
           Frontend
         </p>
 
