@@ -6,7 +6,8 @@ export const projectsData = [
     image: "/video/grammarly.mp4",
     borderRadiusRight: "r-full",
     borderRadiusLeft: "tl-full",
-    backgroundWidth: "[1040px]",
+    backgroundWidth: "max-w-[840px]",
+    videoWidth: "w-64",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -16,7 +17,8 @@ export const projectsData = [
     image: "/video/moscot_s.mp4",
     borderRadiusRight: "tr-full",
     borderRadiusLeft: "l-full",
-    backgroundWidth: "[640px]",
+    backgroundWidth: "max-w-[540px]",
+    videoWidth: "w-80",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -26,7 +28,8 @@ export const projectsData = [
     image: "/video/baileyNelson.mp4",
     borderRadiusRight: "tr-full",
     borderRadiusLeft: "l-full",
-    backgroundWidth: "[1040px]",
+    backgroundWidth: "max-w-[840px]",
+    videoWidth: "w-64",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -36,7 +39,8 @@ export const projectsData = [
     image: "/video/kind.mp4",
     borderRadiusRight: "r-full",
     borderRadiusLeft: "bl-full",
-    backgroundWidth: "[640px]",
+    backgroundWidth: "max-w-[640px]",
+    videoWidth: "w-80",
     technologies: ["Next.js", "Gsap", "Css"],
   },
   {
@@ -46,7 +50,8 @@ export const projectsData = [
     image: "/video/nike.mp4",
     borderRadiusRight: "r-full",
     borderRadiusLeft: "bl-full",
-    backgroundWidth: "[640px]",
+    backgroundWidth: "max-w-[640px]",
+    videoWidth: "w-80",
     technologies: ["Next.js", "Gsap", "Css"],
   },
 ];

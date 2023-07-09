@@ -46,7 +46,7 @@ const ProjectPageHeader = () => {
         "-=1"
       )
       .fromTo(
-        ".project-title",
+        ".project-header",
         {
           duration: 1.5,
           opacity: 0,

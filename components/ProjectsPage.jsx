@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { projectsData } from "./data/projectsData";
 import ProjectSingle from "./ProjectSingle";
 
 import ProjectPageHeader from "./ProjectPageHeader";
+import ArrowLeft from "./ArrowLeft";
 
 const ProjectsPage = () => {
   const [projectsRef, setProjectsRef] = useArrayRef();
@@ -18,6 +19,7 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
+    gsap.registerPlugin(ScrollTrigger);
 
     // const GSAP = require("gsap/CSSRulePlugin");
     // const { CSSRulePlugin } = GSAP;
@@ -27,7 +29,6 @@ const ProjectsPage = () => {
 
     projectsRef.current.forEach((project) => {
       const wrapper = project.querySelector(".reveal");
-      const right = project.querySelector(".baileyNelson-project");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -52,6 +53,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="project-page p-8">
+      <ArrowLeft />
       <ProjectPageHeader />
       <div className="project-sections flex-col">
         {projectsData.map((project) => (
@@ -63,6 +65,7 @@ const ProjectsPage = () => {
             borderRadiusRight={project.borderRadiusRight}
             borderRadiusLeft={project.borderRadiusLeft}
             backgroundWidth={project.backgroundWidth}
+            videoWidth={project.videoWidth}
             setProjectsRef={setProjectsRef}
           />
         ))}

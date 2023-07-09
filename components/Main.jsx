@@ -5,6 +5,8 @@ import ToggleButton from "./ToggleButton";
 import ArrowRight from "./ArrowRight";
 
 const Main = () => {
+  const thisis = "this is ";
+
   useEffect(() => {
     let tl = gsap.timeline({ delay: 0.2 });
 
@@ -16,15 +18,15 @@ const Main = () => {
       ease: "power2.out",
       stagger: {
         each: 0.1,
-        ease: "sine.out",
+        ease: "power2.out",
       },
     });
   }, []);
 
   return (
     <div id="main" className="w-full h-screen text-center dark:bg-[#121212]">
-      <ArrowRight />
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
+        <ArrowRight />
         <div className="animation">
           <ToggleButton />
 
@@ -33,7 +35,16 @@ const Main = () => {
           </p>
 
           <h1 className="py-4 text-gray-700 tracking-wider animation dark:text-gray-200">
-            this is <span className="text-[#5651e5] animate-text">ishan</span>
+            {thisis.split("").map((letter, index) => (
+              <span
+                className="py-4 text-gray-700 tracking-wider animation dark:text-gray-200"
+                key={index}
+              >
+                {letter}
+              </span>
+            ))}
+
+            <span className="text-[#5651e5] animate-text animation">ishan</span>
           </h1>
 
           <p className="uppercase text-md md:text-xl tracking-wider text-gray-600 dark:text-gray-400 animation">
