@@ -26,7 +26,6 @@ const Main = () => {
   return (
     <div id="main" className="w-full h-screen text-center dark:bg-[#121212]">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
-        <ArrowRight />
         <div className="animation">
           <ToggleButton />
 
@@ -61,6 +60,7 @@ const Main = () => {
               </div>
             </a>
           </div>
+          <ArrowRight />
         </div>
       </div>
     </div>

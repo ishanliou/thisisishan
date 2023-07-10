@@ -26,7 +26,7 @@ const ProjectPageHeader = () => {
         y: 0,
         ease: "power4.out",
         stagger: {
-          amount: 0.3,
+          amount: 0.5,
         },
       }
     )
@@ -59,7 +59,7 @@ const ProjectPageHeader = () => {
           y: 0,
           ease: "power4.out",
         },
-        "-=0.7"
+        "-=0.8"
       );
   }, []);
   return (

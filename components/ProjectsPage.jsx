@@ -9,13 +9,13 @@ import ProjectPageHeader from "./ProjectPageHeader";
 import ArrowLeft from "./ArrowLeft";
 
 const ProjectsPage = () => {
-  const [projectsRef, setProjectsRef] = useArrayRef();
-
-  function useArrayRef() {
+  const useArrayRef = () => {
     const projectsRef = useRef([]);
     projectsRef.current = [];
     return [projectsRef, (ref) => ref && projectsRef.current.push(ref)];
-  }
+  };
+
+  const [projectsRef, setProjectsRef] = useArrayRef();
 
   useEffect(() => {
     const tl = gsap.timeline();
