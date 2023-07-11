@@ -24,7 +24,7 @@ const ProjectSingle = ({
     >
       <div
         className={`project-container relative ${backgroundWidth} w-full h-full mx-auto p-4 ${backgroundMinWidth} ${backgroundMinHeight}
-        flex justify-center items-center ${backgroundColor} rounded-${borderRadiusRight} reveal rounded-${borderRadiusLeft}`}
+        flex justify-center items-center ${backgroundColor} ${borderRadiusRight} reveal ${borderRadiusLeft}`}
       >
         {/* <div className="absolute bottom-0 left-0 h-16 w-16 ml-10 uppercase text-sm md:text-l tracking-widest text-gray-100">
           {name}
