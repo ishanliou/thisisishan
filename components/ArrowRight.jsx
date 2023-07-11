@@ -20,7 +20,7 @@ const ArrowRight = () => {
     );
   });
   return (
-    <div className=" text-4xl text-gray-600 flex justify-center  dark:text-gray-400 cursor-pointer   arrow-right arrow">
+    <div className=" text-4xl text-gray-600 flex justify-center  dark:text-gray-400    arrow-right arrow">
       <Link href="/projects">
         <VscArrowCircleRight className="hover:scale-110 hover:text-sky-500 ease-out duration-300 " />
       </Link>

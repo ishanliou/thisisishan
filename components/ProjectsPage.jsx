@@ -29,12 +29,13 @@ const ProjectsPage = () => {
 
     projectsRef.current.forEach((project) => {
       const wrapper = project.querySelector(".reveal");
+      const video = project.querySelector(".video-container");
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
           // start: "top center+=40",
-          start: "top-=100 center",
+          start: "top-=150 center",
           // start: "top bottom",
           end: "bottom +=80",
           // markers: true,
@@ -46,27 +47,40 @@ const ProjectsPage = () => {
 
       tl.to(wrapper, {
         ease: "power2.out",
-        duration: 1.2,
+        duration: 1.8,
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       });
+
+      tl.to(
+        video,
+        {
+          ease: "power2.out",
+          duration: 1.8,
+          scale: 1,
+        },
+        "<"
+      );
     });
   }, []);
 
   return (
-    <div className="project-page p-12 md:p-28">
+    <div className="project-page p-12 md:p-28 overflow-hidden">
       <ArrowLeft />
       <ProjectPageHeader />
-      <main className="project-sections flex flex-wrap justify-center lg:justify-between gap-x-2.5 lg:gap-x-2 gap-y-10 md:gap-y-56 ">
+      <main className="project-sections flex flex-wrap justify-center lg:justify-between gap-x-2.5 lg:gap-x-2 gap-y-10 md:gap-y-28 ">
         {projectsData.map((project) => (
           <ProjectSingle
             key={project.name}
             name={project.name}
             hasMargin={project.hasMargin}
             backgroundColor={project.backgroundColor}
+            backgroundMinHeight={project.backgroundMinHeight}
             image={project.image}
             borderRadiusRight={project.borderRadiusRight}
             borderRadiusLeft={project.borderRadiusLeft}
+            sectionWidth={project.sectionWidth}
             backgroundWidth={project.backgroundWidth}
+            sectionHeight={project.sectionHeight}
             videoWidth={project.videoWidth}
             setProjectsRef={setProjectsRef}
           />

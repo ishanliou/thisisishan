@@ -27,3 +27,13 @@
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   width: 100%;
 }
+
+.video-container {
+  scale: 115%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .video-container {
+    scale: 100%;
+  }
+}
