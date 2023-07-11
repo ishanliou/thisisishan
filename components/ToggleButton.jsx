@@ -17,7 +17,7 @@ const ToggleButton = () => {
   //Change theme use system theme changes
   useEffect(() => {
     setTheme(systemTheme);
-  }, [systemTheme]);
+  }, [setTheme, systemTheme]);
 
   if (!mounted) {
     return null;

@@ -57,7 +57,7 @@ const ProjectsPage = () => {
         "<"
       );
     });
-  }, []);
+  }, [projectsRef]);
 
   return (
     <div className="project-page p-12 md:p-28 overflow-hidden">

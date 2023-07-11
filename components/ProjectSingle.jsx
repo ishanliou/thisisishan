@@ -15,7 +15,7 @@ const ProjectSingle = ({
   videoWidth,
   setProjectsRef,
 }) => {
-  console.log(name);
+  // console.log(name);
   return (
     <section
       className={`${name}-project  project ${sectionWidth}
@@ -34,6 +34,7 @@ const ProjectSingle = ({
             className={` ${videoWidth} h-auto `}
             controls
             autoPlay
+            playsInline
             loop
             muted
           >
