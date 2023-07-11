@@ -43,7 +43,7 @@ export const projectsData = [
     videoWidth: "w-64",
   },
   {
-    name: "PlaceHoler",
+    name: "PlaceHoler-1",
     hasMargin: false,
     backgroundColor: "bg-[#db4c44]",
     backgroundMinWidth: "min-w-[180px]",
@@ -57,7 +57,7 @@ export const projectsData = [
     videoWidth: "w-0",
   },
   {
-    name: "PlaceHoler",
+    name: "PlaceHoler-2",
     hasMargin: false,
     backgroundColor: "bg-[#e0c5a5]",
     backgroundMinWidth: "min-w-[100px]",
@@ -113,7 +113,7 @@ export const projectsData = [
     videoWidth: "w-64",
   },
   {
-    name: "PlaceHoler",
+    name: "PlaceHoler-3",
     hasMargin: true,
     backgroundColor: "bg-[#db4c44]",
     backgroundMinWidth: "min-w-[180px]",
@@ -127,7 +127,7 @@ export const projectsData = [
     videoWidth: "w-0",
   },
   {
-    name: "PlaceHoler",
+    name: "PlaceHoler-4",
     hasMargin: false,
     backgroundColor: "bg-[#d5d1c8]",
     backgroundMinWidth: "min-w-[300px]",
@@ -169,7 +169,7 @@ export const projectsData = [
     videoWidth: "w-72",
   },
   {
-    name: "PlaceHoler",
+    name: "PlaceHoler-5",
     hasMargin: true,
     backgroundColor: "bg-[#db4c44]",
     backgroundMinWidth: "min-w-[180px]",

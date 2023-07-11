@@ -95,7 +95,7 @@ const ProjectPageHeader = () => {
           <div className="mr-1 tech"> JavaScript |</div>
           <div className="mr-1 tech"> React.js |</div>
           <div className="mr-1 tech"> Next.js |</div>
-          <div className="mr-1 tech"> Greensock / Gsap |</div>
+          <div className="mr-1 tech"> GreenSock / Gsap |</div>
         </div>
       </div>
     </>
