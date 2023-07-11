@@ -3,6 +3,7 @@ import React from "react";
 const ProjectSingle = ({
   name,
   backgroundColor,
+  backgroundMinWidth,
   backgroundMinHeight,
   image,
   hasMargin,
@@ -22,7 +23,8 @@ const ProjectSingle = ({
       ref={setProjectsRef}
     >
       <div
-        className={`"project-container relative ${backgroundWidth} w-full h-full mx-auto p-4 min-w-[340px]
+        className={`"project-container relative ${backgroundWidth} w-full h-full mx-auto p-4 
+        ${backgroundMinWidth}
         ${backgroundMinHeight}
         flex justify-center items-center 
         

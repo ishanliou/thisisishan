@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 
 const ArrowLeft = () => {
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 1 });
+    const tl = gsap.timeline({ delay: 1.4 });
     tl.fromTo(
       ".arrow-left",
       {
@@ -19,7 +19,7 @@ const ArrowLeft = () => {
     );
   });
   return (
-    <div className=" text-4xl text-gray-600  dark:text-gray-400 mb-4 arrow-left">
+    <div className=" text-4xl text-gray-600 flex justify-start dark:text-gray-400 mb-4 arrow-left">
       <Link href="/">
         <VscArrowCircleLeft className="hover:scale-110 ease-out duration-300 hover:text-sky-500 " />
       </Link>

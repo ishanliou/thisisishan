@@ -55,28 +55,36 @@ const ProjectPageHeader = () => {
         "-=1"
       )
       .fromTo(
-        ".project-header",
+        ".project-header > div",
         {
-          duration: 1.5,
+          duration: 1.3,
           opacity: 0,
-          y: 20,
+          autoAlpha: 0,
           ease: "power4.out",
+          y: 30,
         },
         {
-          duration: 1.5,
+          duration: 1.3,
           opacity: 1,
-          y: 0,
+          autoAlpha: 1,
           ease: "power4.out",
+          y: 0,
+          stagger: {
+            from: "end",
+            each: 0.2,
+          },
         },
         "-=0.8"
       );
   }, []);
   return (
     <>
-      <div className="header-container max-w-[1440px] h-[36vh] lg:h-[45vh] group ">
-        <p className="project-header uppercase text-4xl sm:text-7xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
-          Frontend
-        </p>
+      <div className="header-container max-w-[1440px] h-[36vh] lg:h-[54vh] group ">
+        <div className="project-header  text-4xl sm:text-8xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
+          <div>Frontend</div>
+          <div>Projects &</div>
+          <div>Cases</div>
+        </div>
 
         <div className="hr w-full h-[1px] bg-slate-700"></div>
         <div className="flex-col  tracking-widest text-gray-400 dark:text-gray-400 mt-2 ml-1">

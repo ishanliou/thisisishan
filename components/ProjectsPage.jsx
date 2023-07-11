@@ -34,14 +34,10 @@ const ProjectsPage = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
-          // start: "top center+=40",
-          start: "top-=150 center",
-          // start: "top bottom",
+          start: "top-=150 center+=100",
           end: "bottom +=80",
           // markers: true,
           toggleActions: "play none none reverse",
-          // toggleActions: "restart none none reset",
-          // scrub: true,
         },
       });
 
@@ -74,6 +70,7 @@ const ProjectsPage = () => {
             name={project.name}
             hasMargin={project.hasMargin}
             backgroundColor={project.backgroundColor}
+            backgroundMinWidth={project.backgroundMinWidth}
             backgroundMinHeight={project.backgroundMinHeight}
             image={project.image}
             borderRadiusRight={project.borderRadiusRight}
