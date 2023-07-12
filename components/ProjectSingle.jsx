@@ -32,7 +32,7 @@ const ProjectSingle = ({
         <div className={`video-container w-100 h-auto`}>
           <video
             className={` ${videoWidth} h-auto `}
-            controls
+            // controls
             autoPlay
             playsInline
             loop
