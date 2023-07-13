@@ -79,7 +79,7 @@ const ProjectPageHeader = () => {
   }, []);
   return (
     <>
-      <div className="header-container max-w-[1440px] h-[35vh] lg:h-[54vh] group ">
+      <div className="header-container max-w-[1440px] h-[35vh] lg:h-[55vh] group ">
         <div className="project-header  text-4xl md:text-6xl lg:text-8xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
           <div>Frontend</div>
           <div>Projects &</div>
