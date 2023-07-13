@@ -79,15 +79,15 @@ const ProjectPageHeader = () => {
   }, []);
   return (
     <>
-      <div className="header-container max-w-[1440px] h-[40vh] lg:h-[54vh] group ">
-        <div className="project-header  text-4xl sm:text-8xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
+      <div className="header-container max-w-[1440px] h-[35vh] lg:h-[54vh] group ">
+        <div className="project-header  text-4xl md:text-6xl lg:text-8xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
           <div>Frontend</div>
           <div>Projects &</div>
           <div>Cases</div>
         </div>
 
         <div className="hr w-full h-[1px] bg-slate-700"></div>
-        <div className="flex-col  tracking-widest text-gray-400 dark:text-gray-400 mt-2 ml-1">
+        <div className="flex flex-row flex-wrap lg:flex-col tracking-widest text-gray-400 dark:text-gray-400 mt-2 ml-1">
           <div className="mr-1 tech">HTML |</div>
           <div className="mr-1 tech">CSS |</div>
           <div className="mr-1 tech">Bootstrap |</div>
