@@ -78,27 +78,25 @@ const ProjectPageHeader = () => {
       );
   }, []);
   return (
-    <>
-      <div className="header-container max-w-[1440px] h-[35vh] lg:h-[55vh] group ">
-        <div className="project-header  text-4xl md:text-6xl lg:text-8xl font-bold tracking-widest text-gray-600 dark:text-gray-400 ">
-          <div>Frontend</div>
-          <div>Projects &</div>
-          <div>Cases</div>
-        </div>
-
-        <div className="hr w-full h-[1px] bg-slate-700"></div>
-        <div className="flex flex-row flex-wrap lg:flex-col tracking-widest text-gray-400 dark:text-gray-400 mt-2 ml-1">
-          <div className="mr-1 tech">HTML |</div>
-          <div className="mr-1 tech">CSS |</div>
-          <div className="mr-1 tech">Bootstrap |</div>
-          <div className="mr-1 tech">Tailwind |</div>
-          <div className="mr-1 tech"> JavaScript |</div>
-          <div className="mr-1 tech"> React.js |</div>
-          <div className="mr-1 tech"> Next.js |</div>
-          <div className="mr-1 tech"> GreenSock / Gsap |</div>
-        </div>
+    <div className="header-container max-w-[1440px] group mb-28">
+      <div className="project-header  text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wide text-gray-600 dark:text-gray-400 ">
+        <div>Frontend</div>
+        <div>Projects &</div>
+        <div>Cases</div>
       </div>
-    </>
+
+      <div className="hr w-full h-[1px] bg-slate-700"></div>
+      <div className="flex flex-row flex-wrap lg:flex-col tracking-widest text-lg text-gray-400 dark:text-gray-400 mt-3 ml-1">
+        <div className="mr-1 tech">HTML |</div>
+        <div className="mr-1 tech">CSS |</div>
+        <div className="mr-1 tech">Bootstrap |</div>
+        <div className="mr-1 tech">Tailwind |</div>
+        <div className="mr-1 tech"> JavaScript |</div>
+        <div className="mr-1 tech"> React.js |</div>
+        <div className="mr-1 tech"> Next.js |</div>
+        <div className="mr-1 tech"> GreenSock / Gsap |</div>
+      </div>
+    </div>
   );
 };
 

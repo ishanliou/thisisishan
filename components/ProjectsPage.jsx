@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
-          start: "top-=150 center+=100",
+          start: "top-=250 center+=100",
           end: "bottom +=80",
           // markers: true,
           toggleActions: "play none none reverse",
@@ -60,30 +60,26 @@ const ProjectsPage = () => {
   }, [projectsRef]);
 
   return (
-    <div className="project-page p-12 md:p-28 overflow-hidden">
-      <ArrowLeft />
-      <ProjectPageHeader />
-      <main className="project-sections flex flex-wrap justify-center lg:justify-between gap-x-2.5 lg:gap-x-2 gap-y-10 md:gap-y-28 ">
-        {projectsData.map((project) => (
-          <ProjectSingle
-            key={project.name}
-            name={project.name}
-            hasMargin={project.hasMargin}
-            backgroundColor={project.backgroundColor}
-            backgroundMinWidth={project.backgroundMinWidth}
-            backgroundMinHeight={project.backgroundMinHeight}
-            image={project.image}
-            borderRadiusRight={project.borderRadiusRight}
-            borderRadiusLeft={project.borderRadiusLeft}
-            sectionWidth={project.sectionWidth}
-            backgroundWidth={project.backgroundWidth}
-            sectionHeight={project.sectionHeight}
-            videoWidth={project.videoWidth}
-            setProjectsRef={setProjectsRef}
-          />
-        ))}
-      </main>
-    </div>
+    <main className="project-sections flex flex-wrap justify-center lg:justify-between gap-x-2.5 lg:gap-x-2 gap-y-10 md:gap-y-28">
+      {projectsData.map((project) => (
+        <ProjectSingle
+          key={project.name}
+          name={project.name}
+          hasMargin={project.hasMargin}
+          backgroundColor={project.backgroundColor}
+          backgroundMinWidth={project.backgroundMinWidth}
+          backgroundMinHeight={project.backgroundMinHeight}
+          image={project.image}
+          borderRadiusRight={project.borderRadiusRight}
+          borderRadiusLeft={project.borderRadiusLeft}
+          sectionWidth={project.sectionWidth}
+          backgroundWidth={project.backgroundWidth}
+          sectionHeight={project.sectionHeight}
+          videoWidth={project.videoWidth}
+          setProjectsRef={setProjectsRef}
+        />
+      ))}
+    </main>
   );
 };
 
