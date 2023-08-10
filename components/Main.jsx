@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { gsap } from "gsap";
 import ToggleButton from "./ToggleButton";
 import ArrowRight from "./ArrowRight";
@@ -55,8 +55,17 @@ const Main = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-md shadow-gray-400 p-6 mx-2 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn className="dark:fill-gray-400" />
+              </div>
+            </a>
+            <a
+              href="https://github.com/ishanliou"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="rounded-full shadow-md shadow-gray-400 p-6 mx-2 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub className="dark:fill-gray-400" />
               </div>
             </a>
           </div>
